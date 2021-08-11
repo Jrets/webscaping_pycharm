@@ -1,7 +1,7 @@
 from pymongo import MongoClient
 from scrapy.crawler import CrawlerProcess
 from scrapy.settings import Settings
-
+from pprint import pprint
 from instaparser import settings
 from instaparser.spiders.instagram import InstagramSpider
 
@@ -37,5 +37,5 @@ def get_following(user):
     return following_list
 
 
-# followers = pprint(get_followers('mis_knitting'))
-# following = pprint(get_following('mis_knitting'))
+followers = pprint(get_followers('mis_knitting'))
+following = pprint(get_following('mis_knitting'))
